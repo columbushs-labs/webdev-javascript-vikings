@@ -7,14 +7,25 @@ class Soldier {
     attack() {
         return this.strength;
     }
-    recieveDamage(damage) {
-        this.health = this.health - this.damage;
+    recieveDamage(theDamage){
+        this.health = this.health - theDamage;
     }
+
 }
 
 // Viking
 class Viking extends Soldier {
-    
+        constructor() {
+    this.attack() {
+
+    }
+    this.recieveDamage() {
+
+    }
+    battlecry() {
+        
+    }
+        }
 }
 
 // Saxon
