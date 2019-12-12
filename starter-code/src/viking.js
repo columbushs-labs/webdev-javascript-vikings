@@ -50,4 +50,47 @@ class Saxon extends Soldier {
 }
 
 // War
-class War {}
+class War {
+    vikingArmy = [];
+    saxonArmy = [];
+
+    addViking(Viking) {
+        this.vikingArmy.push(Viking)
+    }
+    
+    addSaxon(Saxon) {
+        this.saxonArmy.push(Saxon)
+    }
+
+    vikingAttack() {
+        let randomVikingIndex = Math.floor(Math.random() * this.vikingArmy.length)
+        let randomViking = this.vikingArray[randomVikingIndex];
+
+        let randomSaxonIndex = Math.floor(Math.random() * this.saxonArmy.length)
+        let randomSaxon = this.saxonArray[randomSaxonIndex];
+
+        let message = randomSaxon.receiveDamage(randomViking.strength);
+
+        
+    }
+
+    saxonAttack() {
+        let randomSaxonIndex = Math.floor(Math.random() * this.saxonArmy.length)
+        let randomSaxon = this.saxonArray[randomSaxonIndex];
+
+        let randomVikingIndex = Math.floor(Math.random() * this.vikingArmy.length)
+        let randomViking = this.vikingArray[randomVikingIndex];
+
+
+    }
+
+    showStatus(){
+        if(this.saxonArmy.length <= 0) {
+            return "Vikings have won the war of the century!"
+        }
+    
+    }
+
+
+    
+}
